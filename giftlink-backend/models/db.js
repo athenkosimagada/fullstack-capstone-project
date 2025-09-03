@@ -19,10 +19,10 @@ async function connectToDatabase() {
     await client.connect();
 
     // Task 2: Connect to database giftDB and store in variable dbInstance
-    dbInstance = await client.dbInstance(dbName);
+    dbInstance = await client.db(dbName);
 
     // Task 3: Return database instance
-    return d
+    return dbInstance;
 }
 
 module.exports = connectToDatabase;
